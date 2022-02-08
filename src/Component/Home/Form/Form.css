@@ -1,0 +1,11 @@
+/* li {
+  text-decoration: none;
+  list-style-type: none;
+} */
+.about-list ul li {
+  list-style-type: none;
+}
+
+/* .list {
+  list-style-type: none;
+}  */

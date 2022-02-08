@@ -1,0 +1,36 @@
+h3 {
+  color: #000000 !important;
+  /* font-size: 50px !important; */
+  text-align: left;
+  border-bottom: 1px solid #00000021;
+  padding-bottom: 10px;
+}
+
+.car_model ul {
+  padding: 0;
+  text-align: left;
+}
+
+.car_model li {
+  list-style: none;
+}
+
+.car_model li a {
+  transition: all 0.8 s ease-in-out !important;
+  text-align: left;
+  width: 150px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 5px 0;
+}
+
+.car_model li a:hover {
+  border-radius: 10px;
+  transition: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+
+  /* transition: cubic-bezier(0.075, 0.82, 0.165, 0.035); */
+  padding-left: 6px;
+  background: #006400;
+  color: #ffff;
+}

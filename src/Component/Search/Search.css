@@ -1,0 +1,6 @@
+@media screen and (max-width: 900px) {
+  .search-media {
+    padding: 0px 10px;
+    background: rgb(100, 73, 73);
+  }
+}

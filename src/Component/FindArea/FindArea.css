@@ -1,0 +1,121 @@
+/* .gauto-find-area {
+  margin-top: -75px;
+}
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+.find-box {
+  background: #fff
+    url("https://image.freepik.com/free-photo/mockup-podium-product-presentation-podium-with-cube-blue-background-3d-rendering_41470-4265.jpg?w=826")
+    no-repeat scroll 0 0;
+  padding: 30px;
+  position: relative;
+  z-index: 999;
+  box-shadow: 3px 0 29px rgb(0 0 0 / 26%);
+}
+
+element.style {
+}
+.align-items-center {
+  align-items: center !important;
+}
+.find-text h3 {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  line-height: 40px;
+}
+.find-form form p {
+  margin: 15px 0;
+  position: relative;
+}
+.e-control-wrapper,
+.find-form p input,
+.find-form p select {
+  width: 100% !important;
+  border: 2px solid #f0f0ff !important;
+  padding: 5px 10px;
+  height: 45px !important;
+  color: #111 !important;
+  transition: all 0.4s ease 0s;
+}
+.find-form form p {
+  margin: 15px 0;
+  position: relative;
+}
+.e-float-input.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-float-input.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-input-group.e-control-wrapper.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left),
+.e-input-group.e-float-icon-left:not(.e-success):not(.e-warning):not(.e-error) .e-input-in-wrap,
+.e-input-group:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left) {
+  border-color: rgba(0, 0, 0, 0.42);
+}
+.e-input-group,
+.e-input-group.e-control-wrapper,
+.e-input-group.e-control-wrapper.e-disabled,
+.e-input-group.e-disabled,
+input.e-input,
+textarea.e-input {
+  font-family: "Roboto", "Segoe UI", "GeezaPro", "DejaVu Serif", "sans-serif", "-apple-system", "BlinkMacSystemFont";
+  font-size: 13px;
+  font-weight: 400;
+}
+.e-control-wrapper,
+.sidebar-widget form p input,
+.sidebar-widget form p select {
+  width: 100% !important;
+  border: 2px solid #f0f0ff !important;
+  padding: 5px 10px;
+  height: 45px !important;
+  color: #111 !important;
+  transition: all 0.4s ease 0s;
+  background: #fff !important;
+}
+.e-icons {
+  font-family: "e-icons";
+  font-style: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: none;
+}
+.e-input-group.e-control-wrapper .e-input-group-icon,
+.e-input-group .e-input-group-icon {
+  align-items: center;
+  border: 0 solid;
+  box-sizing: content-box;
+  cursor: pointer;
+  flex-direction: column;
+  font-size: 12px;
+  justify-content: center;
+  line-height: 1;
+  min-height: 18px;
+  min-width: 18px;
+  padding: 0;
+  text-align: center;
+}
+.e-control-wrapper.e-time-wrapper .e-time-icon.e-icons,
+.e-time-wrapper .e-time-icon.e-icons {
+  font-size: 16px;
+  min-height: 20px;
+  min-width: 20px;
+} */

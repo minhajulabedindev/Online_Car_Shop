@@ -1,0 +1,65 @@
+.headr {
+  position: absolute;
+  background: #006400 none repeat scroll 0 0;
+  content: "";
+  top: 0;
+  right: 27%;
+  width: 100%;
+  height: 12%;
+  transform: skewX(45deg);
+  z-index: -4;
+}
+.text {
+  font-family: "Lobster", cursive;
+}
+.color {
+  color: #006400;
+}
+.logo {
+  height: 100px;
+}
+
+.header-action a,
+.header-action a:before {
+  background: #ec3323 none repeat scroll 0 0;
+}
+
+.positon {
+  position: absolute;
+}
+/* ------------------------------- */
+@media screen and (max-width: 900px) {
+  .media {
+    background-color: lightgreen;
+  }
+  .medias {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .logo {
+    text-align: right !important;
+  }
+}
+/* --------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(70, 58, 58);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}

@@ -1,0 +1,60 @@
+.gauto-promo-area {
+  position: relative;
+  background: url("https://image.freepik.com/free-vector/lightened-luxury-sedan-car-darkness-with-headlamps-rear-lights-lit-realistic-image-reflection_1284-28803.jpg?w=740")
+    no-repeat fixed 0 0 / cover;
+  z-index: 1;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.promo-box-left:after,
+.promo-box-left:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  height: 100%;
+  transform: skewX(45deg);
+  z-index: -1;
+}
+@media screen and (max-width: 768px) {
+  .promo-box-left {
+    display: none;
+  }
+  .d {
+    display: block !important;
+  }
+}
+.promo-box-left:after {
+  background: #8f8c8c none repeat scroll 0 0;
+  right: 55%;
+  width: 100vh;
+}
+.gauto-btn,
+button.gauto-theme-btn {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #0f570f;
+  position: relative;
+  margin: 1em;
+  display: inline-block;
+  padding: 8px 15px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #6b739c;
+  text-decoration: none;
+}
+
+::after,
+::before {
+  box-sizing: border-box;
+}
