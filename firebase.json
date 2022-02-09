@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "y",
+    "public": "dist/today-ed308 (online-car-shop)",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
