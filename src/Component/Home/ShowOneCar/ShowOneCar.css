@@ -28,7 +28,9 @@
   }
 }
 .promo-box-left:after {
-  background: #8f8c8c none repeat scroll 0 0;
+  /* background: #fc04be ; */
+  background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff, #ffffff);
+
   right: 55%;
   width: 100vh;
 }

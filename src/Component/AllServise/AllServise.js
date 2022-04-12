@@ -121,16 +121,13 @@ const AllServise = (props) => {
         </div>
         <div class="button">
           <div class="button-layer "></div>
-          <Button onClick={() => setModalShow(true)}>Add To Cart</Button>
+          <Button onClick={() => setModalShow(true)}>Details</Button>
+          <Button onClick={handleAddToCart}>Add To Cart</Button>
 
           <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>
-      <>
-        {/* <Button variant="primary" >
-            Launch vertically centered modal
-          </Button> */}
-      </>
+      <></>
     </div>
   );
 };

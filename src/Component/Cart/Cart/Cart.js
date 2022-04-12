@@ -1,8 +1,10 @@
+// import { Button } from "bootstrap";
 import React, { useState } from "react";
-import "./ShowAddCard.css";
-import { Badge, Button, Nav, Offcanvas } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
-const ShowAddCards = ({ product }) => {
+import "./Cart.css";
+
+const Cart = ({ product }) => {
   const [users, setUsers] = useState([]);
   console.log(users);
   const { name, img, price, _id } = product;
@@ -22,7 +24,6 @@ const ShowAddCards = ({ product }) => {
           if (data.deletedCount > 0) {
             alert("delete successfully");
             const remainingUser = users.filter((user) => user._id === id);
-            console.log(remainingUser);
             setUsers(remainingUser);
           }
         });
@@ -30,9 +31,9 @@ const ShowAddCards = ({ product }) => {
   };
   return (
     <div>
-      <div className="CartProduct-style row align-items-center ">
+      <div className="CartProduct-style row align-items-center form-header ">
         <div className="col-3 col-md-3 col-lg-3 col-sm-3 p-2">
-          <img className=" w-100 " src={img}></img>
+          <img className=" w-75  " src={img}></img>
         </div>
         <div className="col-4 col-md-4 col-lg-4 col-sm-4">
           <h6>{name}</h6>
@@ -56,4 +57,4 @@ const ShowAddCards = ({ product }) => {
   );
 };
 
-export default ShowAddCards;
+export default Cart;

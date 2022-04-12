@@ -2,12 +2,13 @@ import React from "react";
 import { useState } from "react";
 import { Button, Col } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../Hooks/useAuth";
 import useFirebase from "../Hooks/useFirebase";
 import "./LoginRoute.css";
 
 const LoginRoute = () => {
   const [loginData, setLoginData] = useState({});
-  const { loginUser, signInWithGoogle } = useFirebase();
+  const { loginUser, signInWithGoogle } = useAuth();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const LoginRoute = () => {
 
   const handleLoginSubmit = (e) => {
     loginUser(loginData.email, loginData.password, location, navigate);
-
+    console.log("hhhhhhhhhhhhhhh");
     e.preventDefault();
   };
 

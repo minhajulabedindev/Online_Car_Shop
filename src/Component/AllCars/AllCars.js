@@ -2,30 +2,25 @@ import { render } from "@testing-library/react";
 import axios from "axios";
 import React, { useState } from "react";
 import { Button, Card, Modal } from "react-bootstrap";
-import { useHistory } from "react-router";
 import useAuth from "../Hooks/useAuth";
-import useFirebase from "../Hooks/useFirebase";
-import MyVerticallyCenteredModal from "../Modal/Modal";
 import "./AllCars.css";
 
 const AllCars = (props) => {
   const { name, body, price, discount, since, oil, img, _id } = props.product;
-  const user = useFirebase();
+  const user = useAuth();
   const { email } = user.user;
 
   // console.log(email);
   const data = { name, body, price, discount, since, oil, img, _id, email };
-
   const handleAddToCart = () => {
-    console.log();
     axios.post("http://localhost:5000/card", data).then((res) => {
       if (res.data.insertedId) {
-        alert("Blog Added Successful!!");
+        alert(" Successful!!");
       }
     });
   };
   const [modalShow, setModalShow] = React.useState(false);
-  console.log(modalShow);
+
   function MyVerticallyCenteredModal(props) {
     return (
       <Modal {...props} size="lg" centered>

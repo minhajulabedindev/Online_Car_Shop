@@ -13,7 +13,7 @@ const Header = () => {
     <div className=" medias text-white">
       <div className="row container ">
         <div className="col-lg-4 head  ">
-          <img className="logo align-right " src={logo} alt></img>
+          <img className="logo align-right " src="https://i.ibb.co/YNhj865/logo-1.png" alt></img>
         </div>
 
         <div className="col-lg-4   ">

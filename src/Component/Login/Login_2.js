@@ -57,7 +57,7 @@ const Login_2 = (props) => {
                     <input onChange={handleOnBlur} type="password" name="password" id="password" placeholder="Enter your password" required />
 
                     <div className="d-flex align-items-center justify-content-between">
-                      <Button type="submit" className="btn_login ">
+                      <Button onClick={handleLoginSubmit} type="submit" className="btn_login ">
                         Login
                       </Button>
                       <span>If you are new user? please register</span>

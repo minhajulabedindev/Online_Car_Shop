@@ -44,7 +44,7 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
 .img-rating {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: 50%;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }

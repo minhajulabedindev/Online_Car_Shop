@@ -4,24 +4,21 @@ import "./Navigation.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
-import category from "../../Category/Category";
 import Category from "../../Category/Category";
-import Login from "../../Login/Login";
 import useAuth from "../../Hooks/useAuth";
-import useFirebase from "../../Hooks/useFirebase";
-import ShowAddCard from "../../ShowAddCard/ShowAddCard";
 
 // const hardIcon = <FontAwesomeIcon icon={faLocationArrow} />;
 
 const Navigation = () => {
-  const { user, logOut } = useFirebase();
+  const { user, admin, logOut } = useAuth();
   console.log(user.displayName);
   console.log(user.email);
   return (
     <div className="text-white " style={{ position: "relative" }}>
       <Navbar bg="black" variant="dark" expand="lg">
+        {/* className={({ isActive }) => (isActive ? "text-" : "text-white  hover")} */}
         <Container>
-          <Nav.Link className="text-white  hover" as={Link} to="/home">
+          <Nav.Link className={(navinfo) => (navinfo.isActive ? "text-light" : "text-white  hover")} as={Link} to="/home">
             Home
           </Nav.Link>
 
@@ -40,15 +37,13 @@ const Navigation = () => {
               <Nav.Link className="hover text-white " as={Link} to="/about">
                 About
               </Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item to="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item to="#action4">Another action</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item to="#action5">Something else here</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link to="#" className="fw-medium">
-                Link
-              </Nav.Link>
+              {admin ? (
+                <Nav.Link className="hover text-white " as={Link} to="/dashboard">
+                  Dashboard
+                </Nav.Link>
+              ) : (
+                ""
+              )}
             </Nav>
 
             {user.email ? (
@@ -88,14 +83,9 @@ const Navigation = () => {
                 Login
               </Nav.Link>
             )}
-            <Nav.Link className="">
-              <ShowAddCard></ShowAddCard>
+            <Nav.Link className=" text-white " as={Link} to="/cart">
+              Cart
             </Nav.Link>
-
-            {/* <Form className="d-flex">
-              <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" />
-              <Button variant="outline-success">Search</Button>
-            // </Form> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

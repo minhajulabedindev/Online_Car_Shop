@@ -11,11 +11,11 @@ const Slider = () => {
             <div class="card">
               <div class="contentw">
                 <div class="img">
-                  <img src="images/img1.jpg" alt="" />
+                  <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=740" alt="" />
                 </div>
                 <div class="details">
                   <div class="name">Andrew Neil</div>
-                  <div class="job">Web Designer</div>
+                  <div class="job">Managing Director </div>
                 </div>
                 <div class="media-icons">
                   <a href="#">
@@ -36,11 +36,14 @@ const Slider = () => {
             <div class="card">
               <div class="contentw">
                 <div class="img">
-                  <img src="images/img2.jpg" alt="" />
+                  <img
+                    src="https://img.freepik.com/free-photo/red-haired-serious-young-man-blogger-looks-confidently_273609-16730.jpg?w=740"
+                    alt=""
+                  />
                 </div>
                 <div class="details">
                   <div class="name">Jasmine Carter</div>
-                  <div class="job">UI Designer</div>
+                  <div class="job">Chief Executive </div>
                 </div>
                 <div class="media-icons">
                   <a href="#">
@@ -61,11 +64,11 @@ const Slider = () => {
             <div class="card">
               <div class="contentw">
                 <div class="img">
-                  <img src="images/img3.jpg" alt="" />
+                  <img src="https://img.freepik.com/free-photo/cheerful-curly-business-girl-wearing-glasses_176420-206.jpg?w=740" alt="" />
                 </div>
                 <div class="details">
                   <div class="name">Justin Chung</div>
-                  <div class="job">Web Devloper</div>
+                  <div class="job">Financial Officer</div>
                 </div>
                 <div class="media-icons">
                   <a href="#">
@@ -88,11 +91,14 @@ const Slider = () => {
             <div class="card">
               <div class="contentw">
                 <div class="img">
-                  <img src="images/img4.jpg" alt="" />
+                  <img
+                    src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg?w=740"
+                    alt=""
+                  />
                 </div>
                 <div class="details">
                   <div class="name">Appolo Reef</div>
-                  <div class="job">Web Designer</div>
+                  <div class="job">Technology Officer</div>
                 </div>
                 <div class="media-icons">
                   <a href="#">
@@ -113,11 +119,11 @@ const Slider = () => {
             <div class="card">
               <div class="contentw">
                 <div class="img">
-                  <img src="images/img5.jpg" alt="" />
+                  <img src="https://img.freepik.com/free-photo/smiling-redhead-girl-using-laptop-looking_176420-21328.jpg?w=740" alt="" />
                 </div>
                 <div class="details">
                   <div class="name">Adrina Calvo</div>
-                  <div class="job">UI Designer</div>
+                  <div class="job">Legal Officer</div>
                 </div>
                 <div class="media-icons">
                   <a href="#">
@@ -138,11 +144,14 @@ const Slider = () => {
             <div class="card">
               <div class="contentw">
                 <div class="img">
-                  <img src="images/img6.jpeg" alt="" />
+                  <img
+                    src="https://img.freepik.com/free-photo/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded_171337-1267.jpg?w=740"
+                    alt=""
+                  />
                 </div>
                 <div class="details">
                   <div class="name">Nicole Lewis</div>
-                  <div class="job">Web Devloper</div>
+                  <div class="job">Marketing Officer</div>
                 </div>
                 <div class="media-icons">
                   <a href="#">

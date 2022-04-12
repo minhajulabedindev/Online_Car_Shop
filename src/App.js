@@ -5,44 +5,93 @@ import Home from "./Component/Home/Home/Home";
 import Navigation from "./Component/Shared/Navigation/Navigation";
 import Footer from "./Component/Shared/Footer/Footer";
 import PageNotFound from "./Component/PageNotFound/PageNotFound";
-import Header from "./Component/Home/Header/Header";
-import Shop from "./Component/Shop/Shop";
-import AllCar from "./Component/AllCars/AllCar";
+
 import { Modal } from "bootstrap";
 import MyVerticallyCenteredModal from "./Component/Modal/Modal";
 import About from "./Component/About/About";
 import PrivateRoute from "./Component/PrivateRoute/PrivateRoute";
-import Login from "./Component/Login/Login";
-import Login_2 from "./Component/Login/Login_2";
+
 import LoginRoute from "./Component/LoginRoute/LoginRoute";
 import AllServises from "./Component/AllServise/AllServises";
 import BuySuccess from "./Component/BuySuccess/BuySuccess";
+import AuthProvider from "./Component/Context/AuthProvider/AuthProvider";
+import Dashboard from "./Component/Dashboard/Dashboard/Dashboard";
+import AdminRoute from "./Component/AdminRoute/AdminRoute";
+import AddBlog from "./Component/Dashboard/AddBlog/AddBlog";
+import AddNewItem from "./Component/Dashboard/AddNewItem/AddNewItem";
+import MakeAdmin from "./Component/Dashboard/MakeAdmin/MakeAdmin";
+import AddFeaturedItem from "./Component/Dashboard/AddFeaturedItem/AddFeaturedItem";
+import AddReview from "./Component/Dashboard/AddReview/AddReview";
+import DashboardHome from "./Component/Dashboard/DashboardHome/DashboardHome";
+import Register from "./Component/Register/Register";
+
+import MainCart from "./Component/Cart/MainCart/MainCart";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Navigation></Navigation>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<LoginRoute></LoginRoute>} />
-          <Route path="/shop" element={<AllServises></AllServises>} />
-          <Route path="/buy" element={<BuySuccess></BuySuccess>} />
-          <Route
-            path="/about"
-            element={
-              <PrivateRoute>
-                <About></About>
-              </PrivateRoute>
-            }
-          ></Route>
-          {/* <Route path="/login" element={<Login_2></Login_2>} /> */}
-          <Route path="/bmw:id" element={<MyVerticallyCenteredModal></MyVerticallyCenteredModal>} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Navigation></Navigation>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/login" element={<LoginRoute></LoginRoute>} />
+            <Route path="/register" element={<Register></Register>} />
+            <Route path="/shop" element={<AllServises></AllServises>} />
+            <Route path="/buy" element={<BuySuccess></BuySuccess>} />
+            <Route path="/cart" element={<MainCart></MainCart>} />
+            <Route
+              path="/about"
+              element={
+                <PrivateRoute>
+                  <About></About>
+                </PrivateRoute>
+              }
+            ></Route>
+            <Route path="/dashboard" element={<Dashboard />}>
+              <Route path={`/dashboard`} element={<DashboardHome />} />
+              <Route
+                path={`/dashboard/addReview`}
+                element={
+                  <PrivateRoute>
+                    <AddReview />
+                  </PrivateRoute>
+                }
+              />
+              <Route path={`/dashboard/addFeatured`} element={<AddFeaturedItem />} />
+
+              <Route
+                path={`/dashboard/makeAdmin`}
+                element={
+                  <AdminRoute>
+                    <MakeAdmin />
+                  </AdminRoute>
+                }
+              />
+              <Route
+                path={`/dashboard/addNewItem`}
+                element={
+                  <AdminRoute>
+                    <AddNewItem />
+                  </AdminRoute>
+                }
+              />
+              <Route
+                path={`/dashboard/addBlogs`}
+                element={
+                  <AdminRoute>
+                    <AddBlog />
+                  </AdminRoute>
+                }
+              />
+            </Route>
+            <Route path="/bmw:id" element={<MyVerticallyCenteredModal></MyVerticallyCenteredModal>} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
       ,
     </div>
   );

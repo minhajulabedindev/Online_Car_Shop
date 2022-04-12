@@ -4,7 +4,7 @@ import AllCars from "./AllCars";
 
 const AllCar = () => {
   const [products, setProducts] = useState([]);
-  // console.log(products.name);
+  console.log(products);
 
   useEffect(() => {
     fetch("http://localhost:5000/bmw")
