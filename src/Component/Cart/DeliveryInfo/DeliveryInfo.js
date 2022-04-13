@@ -3,7 +3,7 @@ import "./DeliveryInfo.css";
 
 const DeliveryInfo = () => {
   return (
-    <div className=" mt-lg-5 ">
+    <div className=" mt-lg-5 p-4">
       <div className="form-header pt-lg-5 text-centers">
         <div className=" ">
           <h4>Delivery Information</h4>
@@ -67,13 +67,15 @@ const DeliveryInfo = () => {
               <label className="form-check-label" for="invalidCheck">
                 Agree to terms and conditions
               </label>
-              <div className="invalid-feedback">You must agree before submitting.</div>
+              <div className="invalid-feedback mt-3">You must agree before submitting.</div>
             </div>
           </div>
-          <div className="col-12">
-            <button className="btn btn-primary" type="submit">
-              Submit form
-            </button>
+          <div className="col-12 ">
+            <div className="m-5">
+              <button className="btn btn-warning" type="submit ">
+                Submit form
+              </button>
+            </div>
           </div>
         </form>
       </div>

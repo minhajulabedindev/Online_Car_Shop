@@ -13,7 +13,7 @@ const AllServise = (props) => {
 
   const handleAddToCart = () => {
     console.log();
-    axios.post("http://localhost:5000/card", data).then((res) => {
+    axios.post("https://afternoon-scrubland-76608.herokuapp.com/card", data).then((res) => {
       if (res.data.insertedId) {
         alert("Blog Added Successful!!");
       }

@@ -6,7 +6,7 @@ const DashboardHome = () => {
   const { user } = useAuth();
   const { items, setItems } = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/card")
+    fetch("https://afternoon-scrubland-76608.herokuapp.com/card")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);

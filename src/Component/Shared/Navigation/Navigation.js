@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Container, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import "./Navigation.css";
 import { Link } from "react-router-dom";
@@ -9,10 +9,19 @@ import useAuth from "../../Hooks/useAuth";
 
 // const hardIcon = <FontAwesomeIcon icon={faLocationArrow} />;
 
-const Navigation = () => {
+const Navigation = ({ item }) => {
   const { user, admin, logOut } = useAuth();
   console.log(user.displayName);
   console.log(user.email);
+  const [products, setProducts] = useState([]);
+  console.log(products);
+
+  useEffect(() => {
+    fetch("https://afternoon-scrubland-76608.herokuapp.com/card")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, [products]);
+  const UsersProduct = products.filter((product) => product.email === user.email);
   return (
     <div className="text-white " style={{ position: "relative" }}>
       <Navbar bg="black" variant="dark" expand="lg">
@@ -84,7 +93,10 @@ const Navigation = () => {
               </Nav.Link>
             )}
             <Nav.Link className=" text-white " as={Link} to="/cart">
-              Cart
+              <div className=" position-relative">
+                Cart
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-black">{UsersProduct.length}</span>
+              </div>
             </Nav.Link>
           </Navbar.Collapse>
         </Container>
@@ -92,5 +104,6 @@ const Navigation = () => {
     </div>
   );
 };
+//https://afternoon-scrubland-76608.herokuapp.com/
 
 export default Navigation;

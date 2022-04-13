@@ -6,7 +6,7 @@ const AllServises = () => {
   console.log(products.name);
 
   useEffect(() => {
-    fetch("http://localhost:5000/bmw")
+    fetch("https://afternoon-scrubland-76608.herokuapp.com/bmw")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

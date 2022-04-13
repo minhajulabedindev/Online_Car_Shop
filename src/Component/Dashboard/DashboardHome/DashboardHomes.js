@@ -11,7 +11,7 @@
 //   console.log(saveProduct);
 //   //fetch savedProduct API
 //   useEffect(() => {
-//     fetch("http://localhost:5000/card")
+//     fetch("https://afternoon-scrubland-76608.herokuapp.com/card")
 //       .then((res) => res.json())
 //       .then((data) => setSaveProduct(data));
 //   }, []);

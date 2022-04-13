@@ -14,7 +14,7 @@ const Cart = ({ product }) => {
     console.log(id);
     const proceed = window.confirm("Are you sure? you want to delete");
     if (proceed) {
-      const url = `http://localhost:5000/card/${id}`;
+      const url = `https://afternoon-scrubland-76608.herokuapp.com/card/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -47,7 +47,7 @@ const Cart = ({ product }) => {
             {" "}
             Buy{" "}
           </Button>
-          <Button size="sm" className="btn-delete w-100" onClick={() => handleDelete(_id)}>
+          <Button size="sm" className="btn-warning  w-100" onClick={() => handleDelete(_id)}>
             Delete
           </Button>
         </div>

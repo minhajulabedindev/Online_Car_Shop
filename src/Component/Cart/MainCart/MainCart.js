@@ -8,17 +8,14 @@ const MainCart = () => {
   return (
     <div className="container ">
       <div className="">
-        <div className="row ">
-          <div className=" col-lg-7">
-            <DeliveryInfo></DeliveryInfo>
-          </div>
-          <div className="col-lg-5">
-            <OrderSummary></OrderSummary>
+        <div className=" ">
+          <div className="mt-5 pt-3">
+            <Carts></Carts>
           </div>
         </div>
       </div>
       <div className="pt-lg-5">
-        <Carts></Carts>
+        <DeliveryInfo></DeliveryInfo>
       </div>
     </div>
   );

@@ -4,21 +4,24 @@ import React, { useState } from "react";
 import { Button, Card, Modal } from "react-bootstrap";
 import useAuth from "../Hooks/useAuth";
 import "./AllCars.css";
+import { useCart } from "react-use-cart";
 
 const AllCars = (props) => {
   const { name, body, price, discount, since, oil, img, _id } = props.product;
   const user = useAuth();
   const { email } = user.user;
-
+  const { addItem } = useCart();
+  console.log(addItem);
   // console.log(email);
   const data = { name, body, price, discount, since, oil, img, _id, email };
   const handleAddToCart = () => {
-    axios.post("http://localhost:5000/card", data).then((res) => {
+    axios.post("https://afternoon-scrubland-76608.herokuapp.com/card", data).then((res) => {
       if (res.data.insertedId) {
         alert(" Successful!!");
       }
     });
   };
+
   const [modalShow, setModalShow] = React.useState(false);
 
   function MyVerticallyCenteredModal(props) {
@@ -79,6 +82,7 @@ const AllCars = (props) => {
 
   return (
     <div className="col-lg-4 col-sm-12 my-2 ">
+      <h1>Atiqur</h1>
       <div class="product-card">
         <div class="main-images">
           <img id="blue" class="blue active w-100 p-3 " src={img} alt="blue" />
@@ -121,16 +125,13 @@ const AllCars = (props) => {
         </div>
         <div class="button">
           <div class="button-layer "></div>
-          <Button onClick={() => setModalShow(true)}>Add To Cart</Button>
+          <Button onClick={() => setModalShow(true)}>Details</Button>
+          <Button onClick={handleAddToCart}>Add To Cart</Button>
 
           <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)} />
         </div>
       </div>
-      <>
-        {/* <Button variant="primary" >
-          Launch vertically centered modal
-        </Button> */}
-      </>
+      <></>
     </div>
   );
 };
