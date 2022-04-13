@@ -45,7 +45,7 @@ const Carts = () => {
   const handlePurchase = () => {
     // console.log(_id);
     navigate("/purchase");
-    const url = `http://localhost:5000/card`;
+    const url = `https://afternoon-scrubland-76608.herokuapp.com/card`;
     fetch(url, {
       method: "DELETE",
     })

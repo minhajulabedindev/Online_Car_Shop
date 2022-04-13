@@ -42,12 +42,12 @@ function App() {
             <Route path="/shop" element={<AllServises></AllServises>} />
 
             <Route path="/cart" element={<MainCart></MainCart>} />
-            <Route path="/purchase" element={<Purchase></Purchase>} />
+            <Route path="/about" element={<About></About>} />
             <Route
-              path="/about"
+              path="/purchases"
               element={
                 <PrivateRoute>
-                  <About></About>
+                  <Purchase></Purchase>
                 </PrivateRoute>
               }
             ></Route>
