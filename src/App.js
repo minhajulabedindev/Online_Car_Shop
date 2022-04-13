@@ -26,6 +26,7 @@ import DashboardHome from "./Component/Dashboard/DashboardHome/DashboardHome";
 import Register from "./Component/Register/Register";
 
 import MainCart from "./Component/Cart/MainCart/MainCart";
+import Purchase from "./Component/Purchase/Purchase";
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
             <Route path="/login" element={<LoginRoute></LoginRoute>} />
             <Route path="/register" element={<Register></Register>} />
             <Route path="/shop" element={<AllServises></AllServises>} />
-            <Route path="/buy" element={<BuySuccess></BuySuccess>} />
+
             <Route path="/cart" element={<MainCart></MainCart>} />
+            <Route path="/purchase" element={<Purchase></Purchase>} />
             <Route
               path="/about"
               element={

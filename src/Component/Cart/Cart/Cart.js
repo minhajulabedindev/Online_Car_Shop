@@ -6,7 +6,7 @@ import "./Cart.css";
 
 const Cart = ({ product }) => {
   const [users, setUsers] = useState([]);
-  console.log(users);
+
   const { name, img, price, _id } = product;
 
   // handle delete product from add to cart
@@ -22,9 +22,9 @@ const Cart = ({ product }) => {
         .then((data) => {
           console.log(data);
           if (data.deletedCount > 0) {
-            alert("delete successfully");
             const remainingUser = users.filter((user) => user._id === id);
             setUsers(remainingUser);
+            alert("delete successfully");
           }
         });
     }
@@ -43,10 +43,6 @@ const Cart = ({ product }) => {
         </div>
         <div className="p-2 col-3  col-md-3 col-lg-3 col-sm-3">
           {" "}
-          <Button as={Link} to="/buy" className="w-100 mb-1" size="sm">
-            {" "}
-            Buy{" "}
-          </Button>
           <Button size="sm" className="btn-warning  w-100" onClick={() => handleDelete(_id)}>
             Delete
           </Button>

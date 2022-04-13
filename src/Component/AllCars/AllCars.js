@@ -82,7 +82,6 @@ const AllCars = (props) => {
 
   return (
     <div className="col-lg-4 col-sm-12 my-2 ">
-      <h1>Atiqur</h1>
       <div class="product-card">
         <div class="main-images">
           <img id="blue" class="blue active w-100 p-3 " src={img} alt="blue" />
