@@ -5,25 +5,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-/* body {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #f2f2f2;
-  position: relative;
-}
-body::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  background: #ff676d;
-  clip-path: inset(47% 0 0 0);
-  z-index: -1;
-  height: 100%;
-} */
+
 ::selection {
-  background: #ff676d;
+  background: goldenrod;
   color: #fff;
 }
 .containers {
@@ -72,7 +56,7 @@ body::before {
   width: 130px;
   border-radius: 50%;
   padding: 3px;
-  background: #ff676d;
+  background: goldenrod;
   margin-bottom: 14px;
 }
 .card .contentw .img img {
@@ -88,7 +72,7 @@ body::before {
 }
 .card .content .job {
   font-size: 20px;
-  color: #ff676d;
+  color: goldenrod;
 }
 .card .contentw .media-icons {
   margin-top: 10px;
@@ -104,13 +88,13 @@ body::before {
   color: #fff;
   border-radius: 50%;
   border: 2px solid transparent;
-  background: #ff676d;
+  background: goldenrod;
   transition: all 0.3s ease;
 }
 .media-icons a:hover {
-  color: #ff676d;
+  color: goldenrod;
   background-color: #fff;
-  border-color: #ff676d;
+  border-color: goldenrod;
 }
 .container .button {
   width: 100%;

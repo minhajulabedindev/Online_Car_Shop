@@ -15,7 +15,7 @@ const AllCar = () => {
   return (
     <div className="container py-5 ">
       <h1>
-        There is your <span className="color">favorite</span> car{" "}
+        <span className="color">There is your favorite car</span>
       </h1>
 
       <div className="row">

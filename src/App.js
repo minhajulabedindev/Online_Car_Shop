@@ -44,7 +44,7 @@ function App() {
             <Route path="/cart" element={<MainCart></MainCart>} />
             <Route path="/about" element={<About></About>} />
             <Route
-              path="/purchases"
+              path="/purchase"
               element={
                 <PrivateRoute>
                   <Purchase></Purchase>
@@ -98,5 +98,6 @@ function App() {
     </div>
   );
 }
-
+// https://afternoon-scrubland-76608.herokuapp.com/
+// https://afternoon-scrubland-76608.herokuapp.com
 export default App;

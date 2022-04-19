@@ -9,7 +9,7 @@ const AboutPepole = () => {
             <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png" class="usercard_user" alt="User" />
             <div class="usercard_header-info">
               <h3 class="usercard_name">
-                John William <span class="usercard_name-label">Britto</span>
+                Minhajul <span class="usercard_name-label">Abedin</span>
               </h3>
               <span class="usercard_post">React Developer</span>
             </div>

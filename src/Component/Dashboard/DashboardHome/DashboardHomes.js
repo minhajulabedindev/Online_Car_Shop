@@ -1,29 +1,22 @@
-// import React from "react";
-// import { useEffect } from "react";
-// import { useState } from "react";
-// import useAuth from "../Hooks/useAuth";
-// import DashboardHome from "./DashboardHome";
+import React from "react";
+import { Table } from "react-bootstrap";
 
-// const DashboardHomes = () => {
-//   const { user } = useAuth();
+const DashboardHomes = ({ users }) => {
+  //   const UsersProduct = saveProduct.filter((product) => product.email === user.email);
+  return (
+    <div className="row text-start border- border-yellow">
+      <div div className="col-4  mb-2 ">
+        {users.displayName}
+      </div>
+      <div div className="col-4">
+        {users.email}
+      </div>
+      <div div className="col-4">
+        {users._id}
+      </div>
+      <hr />
+    </div>
+  );
+};
 
-//   const [saveProduct, setSaveProduct] = useState([]);
-//   console.log(saveProduct);
-//   //fetch savedProduct API
-//   useEffect(() => {
-//     fetch("https://afternoon-scrubland-76608.herokuapp.com/card")
-//       .then((res) => res.json())
-//       .then((data) => setSaveProduct(data));
-//   }, []);
-
-//   const UsersProduct = saveProduct.filter((product) => product.email === user.email);
-//   return (
-//     <div>
-//       {/* {UsersProduct.map((product) => (
-//         <DashboardHome key={product._id} product={product}></DashboardHome>
-//       ))} */}
-//     </div>
-//   );
-// };
-
-// export default DashboardHomes;
+export default DashboardHomes;

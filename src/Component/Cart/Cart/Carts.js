@@ -22,9 +22,6 @@ const Carts = () => {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, [products]);
-  // useEffect(() => {
-  //   // totalProducts();
-  // }, [price]);
 
   const UsersProduct = products.filter((product) => product.email === user.email);
   console.log(UsersProduct.price);
@@ -34,31 +31,27 @@ const Carts = () => {
   var taxs = allprice / tax;
 
   const totalPrice = deliveryCharge + taxs + allprice;
-  // const totalProducts = () => {
-  //   var prices = 0;
-  //   const price = UsersProduct.map((product) => product.price);
-  //   const allPrice = prices + price;
-  //   setPrice(price);
-  //   console.log(allPrice);
-  // };
 
   const handlePurchase = () => {
-    // console.log(_id);
-    navigate("/purchase");
-    const url = `https://afternoon-scrubland-76608.herokuapp.com/card`;
-    fetch(url, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        if (data.acknowledged === true) {
-          console.log(products);
-          const remainingUser = products.filter((product) => product.email === user.email);
-          console.log(remainingUser);
-          setProducts(remainingUser);
-        }
-      });
+    if (UsersProduct > 0) {
+      navigate("/purchase");
+      const url = `https://afternoon-scrubland-76608.herokuapp.com/card`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          // console.log(data);
+          if (data.acknowledged === true) {
+            console.log(products);
+            const remainingUser = products.filter((product) => product.email === user.email);
+
+            setProducts(remainingUser);
+          }
+        });
+    } else {
+      return alert("Please purchase");
+    }
   };
   return (
     <div className="row g-4">

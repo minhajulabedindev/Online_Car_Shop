@@ -18,7 +18,7 @@ const Header = () => {
 
         <div className="col-lg-4   ">
           <div className="ms-5 ps-5 d-flex">
-            <div className="fs-1  mt-3 p-2 color ">{location} </div>
+            <div className="fs-1 mt-5 p-2 color ">{location} </div>
             <div>
               <h4 className=" text  medias text-center pt-3">Puthia-Rajshahi</h4>
               <p className=" media fo">Bangladesh</p>
@@ -27,7 +27,7 @@ const Header = () => {
         </div>
         <div className="col-lg-4 d-flex  medias ">
           <div className="ms-5 ps-5 ">
-            <div className="fs-1 align-middle mt-3 color p-2">
+            <div className="fs-1 align-middle mt-5 color p-2">
               <i class="fas fa-clock"></i>
             </div>
           </div>

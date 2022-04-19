@@ -13,7 +13,7 @@ const Search = () => {
           </from>
           <div class="input-group flex-nowrap">
             <input type="search" class="form-control fs-4" placeholder="Search" aria-describedby="addon-wrapping" />{" "}
-            <button class="btn btn-outline-success text-white " type="submit">
+            <button class="btn btn-outline-warning text-white " type="submit">
               Search
             </button>
           </div>
